@@ -12,13 +12,13 @@ from openai import OpenAI
 
 
 
-OPENAI_API_KEY =  "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"
+
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-pinecone.init(api_key="d6e0065f-1b75-4255-8866-e05a685b5817",#config.pinecone.api_key,
+pinecone.init(api_key=pinecone.api_key,
               environment="gcp-starter")
 
-index = pinecone.Index("pravo")
+index = pinecone.Index(self)
 
 # Assuming the necessary imports and classes for JSONLoader, RecursiveCharacterTextSplitter, etc. are defined elsewhere
 
