@@ -14,8 +14,8 @@ from tqdm import tqdm
 from openai import OpenAI
 
 
-os.environ["OPENAI_API_KEY"] = "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"
-OPENAI_API_KEY =  "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"
+
+
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 
@@ -100,10 +100,10 @@ def createEmbedding(text):
 # Embed and insert into Pinecone
 
 
-pinecone.init(api_key="d6e0065f-1b75-4255-8866-e05a685b5817",#config.pinecone.api_key,
+pinecone.init(api_key=api_key,#config.pinecone.api_key,
               environment="gcp-starter")
 
-index = pinecone.Index("pravo")
+index = pinecone.Index(self)
 
 
 
