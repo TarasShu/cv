@@ -11,10 +11,10 @@ import numpy as np
 
 
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=api_key_open_ai)
 
-pinecone_api_key = "d6e0065f-1b75-4255-8866-e05a685b5817"
-index_name="pravo"
+
+index_name=index_name
 pinecone.init(api_key=pinecone_api_key,
               environment="gcp-starter")
 
