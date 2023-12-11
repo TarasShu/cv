@@ -17,8 +17,8 @@ from langchain.document_loaders import JSONLoader
 import json
 
 
-os.environ["OPENAI_API_KEY"] = "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"
-OPENAI_API_KEY =  "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"
+
+
 client = OpenAI()
 client.api_key = OPENAI_API_KEY
 
@@ -27,10 +27,10 @@ client.api_key = OPENAI_API_KEY
 
 
 
-pinecone.init(api_key="d6e0065f-1b75-4255-8866-e05a685b5817",#config.pinecone.api_key,
+pinecone.init(api_key=config.pinecone.api_key,
               environment="gcp-starter")
 
-index_name = pinecone.Index("pravo")
+index_name = pinecone.Index(self)
 
 pinecone.whoami()
 index = pinecone.Index(index_name)
